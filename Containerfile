@@ -50,6 +50,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 RUN mkdir -p /etc/authselect/custom/lukshome
 COPY data/lukshome/ /etc/authselect/custom/lukshome
+COPY data/pam_mount/ /etc/security
 
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
