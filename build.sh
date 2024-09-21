@@ -10,6 +10,8 @@ RELEASE="$(rpm -E %fedora)"
 # Mount luks volumes protected by user password
 rpm-ostree install pam_mount
 
+ls -R /tmp
+
 mkdir -p /etc/authselect/custom/lukshome/
 mv /tmp/lukshome/* /etc/authselect/custom/lukshome/
 rmdir /tmp/lukshome
