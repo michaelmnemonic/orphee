@@ -11,7 +11,8 @@ RELEASE="$(rpm -E %fedora)"
 rpm-ostree install pam_mount
 
 mkdir -p /etc/authselect/custom/lukshome/
-cp data/lukshome/* /etc/authselect/custom/lukshome/
+mv /tmp/lukshome/* /etc/authselect/custom/lukshome/
+rmdir /tmp/lukshome
 
 authselect enable custom/lukshome
 
