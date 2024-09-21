@@ -7,13 +7,13 @@ RELEASE="$(rpm -E %fedora)"
 
 ### Install packages
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
+# Mount luks volumes protected by user password
+rpm-ostree install pam_mount
 
-# this installs a package from fedora repos
-rpm-ostree install screen
+mkdir -p /etc/authselect/custom/lukshome/
+cp data/lukshome/* /etc/authselect/custom/lukshome/
+
+authselect enable custom/lukshome
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
