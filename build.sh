@@ -29,3 +29,6 @@ rpm-ostree install pam_mount	\
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+# Do not wait on network during boot
+systemctl disable NetworkManager-wait-online
