@@ -1,0 +1,10 @@
+[Unit]
+Description=Suspend: rmmod ath11k_pci
+Before=sleep.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/rmmod ath11k_pci
+
+[Install]
+WantedBy=sleep.target

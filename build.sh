@@ -35,3 +35,7 @@ systemctl enable podman.socket
 
 # Do not wait on network during boot
 systemctl disable NetworkManager-wait-online
+
+# Unload ath11k before suspend
+systemctl enable ath11k-resume
+systemctl enable ath11k-suspend

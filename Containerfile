@@ -60,6 +60,10 @@ COPY data/fan2go/fan2go /usr/bin
 COPY data/fan2go/fan2go.service /usr/etc/systemd/system/
 COPY data/fan2go/fan2go.yaml /etc/fan2go/
 
+# ath11k needs to be unloaded before suspend
+COPY data/hardware/ath11k-resume.service /usr/etc/systemd/system/
+COPY data/hardware/ath11k-suspend.service /usr/etc/systemd/system/
+
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
