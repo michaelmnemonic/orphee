@@ -11,9 +11,11 @@ RELEASE="$(rpm -E %fedora)"
 # Add KDE PIM
 # Remove GUI for firewalld
 rpm-ostree install pam_mount	\
-	kdepim-addons		\
-	kmail			\
-	merkuro			\
+	kdepim-addons				\
+	kmail						\
+	merkuro						\
+	tokodon						\
+	neochat						\
 	--uninstall firewall-config
 
 # this would install a package from rpmfusion
