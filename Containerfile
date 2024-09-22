@@ -66,6 +66,7 @@ COPY data/hardware/ath11k-suspend.service /usr/etc/systemd/system/
 
 # Add catppuccin color-sheme
 COPY data/catppuccin/*.colors /usr/share/color-schemes/
+COPY data/catppuccin/*.colorscheme /usr/share/konsole/
 
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
