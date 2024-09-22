@@ -28,6 +28,11 @@ rpm-ostree install pam_mount	\
 	gamescope					\
 	kmymoney					\
 	AusweisApp2					\
+	libreoffice-calc			\
+	libreoffice-writer			\
+	libreoffice-impress			\
+	libreoffice-langpack-de		\
+	libreoffice-kf6			\
 	--uninstall firewall-config
 
 # Remove .desktop file for wine applications
