@@ -76,6 +76,9 @@ COPY data/sddm/maik.face.icon /usr/share/sddm/faces
 # Add nfs mount
 COPY data/nfs/* /usr/etc/systemd/system/
 
+# Customize pipewire
+COPY data/pipewire/* /etc/pipewire/pipewire.conf.d/
+
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
