@@ -68,6 +68,11 @@ COPY data/hardware/ath11k-suspend.service /usr/etc/systemd/system/
 COPY data/catppuccin/*.colors /usr/share/color-schemes/
 COPY data/catppuccin/*.colorscheme /usr/share/konsole/
 
+# Add sddm customization
+COPY data/sddm/blueish.png /usr/share/sddm/themes/breeze
+COPY data/sddm/theme.conf.user /usr/share/sddm/themes/breeze
+COPY data/sddm/maik.face.icon /usr/share/sddm/faces
+
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
