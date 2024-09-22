@@ -16,6 +16,8 @@ rpm-ostree install pam_mount	\
 	merkuro						\
 	tokodon						\
 	neochat						\
+	rsms-inter-fonts			\
+	jetbrains-mono-fonts 		\
 	--uninstall firewall-config
 
 # this would install a package from rpmfusion
