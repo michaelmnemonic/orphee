@@ -1,0 +1,8 @@
+[Unit]
+Description=Automount orpheus:
+
+[Automount]
+Where=/var/mnt
+
+[Install]
+WantedBy=multi-user.target

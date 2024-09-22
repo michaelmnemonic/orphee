@@ -1,0 +1,12 @@
+[Unit]
+Description=Mount orpheus at boot
+
+[Mount]
+What=orpheus:
+Where=/var/mnt
+Type=nfs
+TimeoutSec=10
+ForceUnmount=true
+
+[Install]
+WantedBy=multi-user.target

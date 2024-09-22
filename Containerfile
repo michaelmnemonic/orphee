@@ -73,6 +73,9 @@ COPY data/sddm/blueish.png /usr/share/sddm/themes/breeze
 COPY data/sddm/theme.conf.user /usr/share/sddm/themes/breeze
 COPY data/sddm/maik.face.icon /usr/share/sddm/faces
 
+# Add nfs mount
+COPY data/nfs/* /usr/etc/systemd/system/
+
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
