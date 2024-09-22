@@ -64,6 +64,9 @@ COPY data/fan2go/fan2go.yaml /etc/fan2go/
 COPY data/hardware/ath11k-resume.service /usr/etc/systemd/system/
 COPY data/hardware/ath11k-suspend.service /usr/etc/systemd/system/
 
+# Add catppuccin color-sheme
+COPY data/catppuccin/*.colors /usr/share/color-schemes/
+
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
