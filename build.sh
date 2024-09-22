@@ -25,6 +25,7 @@ rpm-ostree install pam_mount	\
 	wine						\
 	wine-mono					\
 	syncthing					\
+	gamescope					\
 	--uninstall firewall-config
 
 # Remove .desktop file for wine applications
