@@ -21,6 +21,7 @@ rpm-ostree install pam_mount	\
 	gwenview					\
 	kcalc						\
 	okular						\
+	steam						\
 	--uninstall firewall-config
 
 # this would install a package from rpmfusion
