@@ -18,6 +18,9 @@ rpm-ostree install pam_mount	\
 	neochat						\
 	rsms-inter-fonts			\
 	jetbrains-mono-fonts 		\
+	gwenview					\
+	kcalc						\
+	okular						\
 	--uninstall firewall-config
 
 # this would install a package from rpmfusion
