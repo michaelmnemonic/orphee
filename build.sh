@@ -22,6 +22,8 @@ rpm-ostree install pam_mount	\
 	kcalc						\
 	okular						\
 	steam						\
+	wine						\
+	wine-mono					\
 	--uninstall firewall-config
 
 # this would install a package from rpmfusion
