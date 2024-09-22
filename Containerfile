@@ -52,6 +52,9 @@ RUN mkdir -p /etc/authselect/custom/lukshome
 COPY data/lukshome/ /etc/authselect/custom/lukshome
 COPY data/pam_mount/ /etc/security
 
+# GPU undervolt for desktop
+COPY data/hardware/gpu-undervolt.conf /etc/tmpfiles.d/
+
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
