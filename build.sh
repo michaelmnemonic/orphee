@@ -9,6 +9,11 @@ RELEASE="$(rpm -E %fedora)"
 
 # Mount luks volumes protected by user password
 rpm-ostree install pam_mount \
+	# Add KDE PIM
+	kdepim-addons
+	kmail
+	merkuro
+	# Remove GUI for firewalld 
 	--uninstall firewall-config
 
 # this would install a package from rpmfusion
