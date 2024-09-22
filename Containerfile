@@ -55,6 +55,11 @@ COPY data/pam_mount/ /etc/security
 # GPU undervolt for desktop
 COPY data/hardware/gpu-undervolt.conf /etc/tmpfiles.d/
 
+# Use fan2go for fan control
+COPY data/fan2go/fan2go /usr/bin
+COPY data/fan2go/fan2go.service /usr/etc/systemd/system/
+COPY data/fan2go/fan2go.yaml /etc/fan2go/
+
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
