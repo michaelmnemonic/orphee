@@ -24,6 +24,7 @@ rpm-ostree install pam_mount	\
 	steam						\
 	wine						\
 	wine-mono					\
+	syncthing					\
 	--uninstall firewall-config
 
 # this would install a package from rpmfusion
