@@ -14,7 +14,7 @@
 
 		<!-- Volume definitions -->
 
-<volume user="maik" fstype="crypt" path="/dev/disk/by-partlabel/%(USER)" mountpoint="~" options="crypto_name=%(USER),fstype=ext4" />
+<volume user="maik" fstype="crypt" path="/dev/disk/by-partlabel/MAIK" mountpoint="~" options="crypto_name=MAIK,fstype=ext4" />
 
 		<!-- pam_mount parameters: General tunables -->
 
