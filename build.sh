@@ -27,6 +27,7 @@ rpm-ostree install pam_mount	\
 	syncthing					\
 	gamescope					\
 	kmymoney					\
+	AusweisApp2					\
 	--uninstall firewall-config
 
 # Remove .desktop file for wine applications
