@@ -8,7 +8,8 @@ RELEASE="$(rpm -E %fedora)"
 ### Install packages
 
 # Mount luks volumes protected by user password
-rpm-ostree install pam_mount
+rpm-ostree install pam_mount \
+	--uninstall firewall-config
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
