@@ -27,6 +27,9 @@ rpm-ostree install pam_mount	\
 	syncthing					\
 	--uninstall firewall-config
 
+# Remove .desktop file for wine applications
+rm /usr/share/applications/wine-*.desktop
+
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
 
