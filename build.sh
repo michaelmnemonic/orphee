@@ -44,8 +44,12 @@ rpm-ostree uninstall			\
 # Remove preinstalled applications
 rpm-ostree override remove firewall-config
 
-# Remove .desktop file for wine applications
+# Hide application entries for wine
 sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/wine-*.desktop
+
+# Hide application entries for syncthing
+sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/syncthing-*.desktop
+
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
