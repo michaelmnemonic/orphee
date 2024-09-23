@@ -32,8 +32,10 @@ rpm-ostree install pam_mount	\
 	libreoffice-writer			\
 	libreoffice-impress			\
 	libreoffice-langpack-de		\
-	libreoffice-kf6			\
-	--uninstall firewall-config
+	libreoffice-kf6
+
+# Remove preinstalled applications
+rpm-ostree override remove firewall-config
 
 # Remove .desktop file for wine applications
 rm /usr/share/applications/wine-*.desktop
