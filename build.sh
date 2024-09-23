@@ -34,6 +34,10 @@ rpm-ostree install pam_mount	\
 	libreoffice-langpack-de		\
 	libreoffice-kf6
 
+# Remove unneded applications
+rpm-ostree uninstall \
+	dosbox-staging
+
 # Remove preinstalled applications
 rpm-ostree override remove firewall-config
 
