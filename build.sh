@@ -10,31 +10,32 @@ RELEASE="$(rpm -E %fedora)"
 # Mount luks volumes protected by user password
 # Add KDE PIM
 # Remove GUI for firewalld
-rpm-ostree install pam_mount	\
+rpm-ostree install				\
+	AusweisApp2					\
+	gamescope					\
+	gwenview					\
+	jetbrains-mono-fonts 		\
+	kcalc						\
 	kdepim-addons				\
 	kmail						\
-	merkuro						\
-	tokodon						\
-	neochat						\
-	rsms-inter-fonts			\
-	jetbrains-mono-fonts 		\
-	gwenview					\
-	kcalc						\
-	okular						\
-	steam						\
-	wine						\
-	wine-mono					\
-	syncthing					\
-	gamescope					\
 	kmymoney					\
-	AusweisApp2					\
-	libreoffice-calc			\
-	libreoffice-writer			\
-	libreoffice-impress			\
-	libreoffice-langpack-de		\
-	libreoffice-kf6				\
 	langpacks-de				\
-	skanpage
+	libreoffice-calc			\
+	libreoffice-impress			\
+	libreoffice-kf6				\
+	libreoffice-langpack-de		\
+	libreoffice-writer			\
+	merkuro						\
+	neochat						\
+	okular						\
+	pam_mount					\
+	rsms-inter-fonts			\
+	skanpage					\
+	steam						\
+	syncthing					\
+	tokodon						\
+	wine						\
+	wine-mono
 
 # Remove unneded applications
 rpm-ostree uninstall			\
