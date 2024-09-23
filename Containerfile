@@ -48,36 +48,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-RUN mkdir -p /etc/authselect/custom/lukshome
-COPY data/lukshome/ /etc/authselect/custom/lukshome
-COPY data/pam_mount/ /etc/security
-
-# GPU undervolt for desktop
-COPY data/hardware/gpu-undervolt.conf /etc/tmpfiles.d/
-
-# Use fan2go for fan control
-COPY data/fan2go/fan2go /usr/bin
-COPY data/fan2go/fan2go.service /usr/etc/systemd/system/
-COPY data/fan2go/fan2go.yaml /etc/fan2go/
-
-# ath11k needs to be unloaded before suspend
-COPY data/hardware/ath11k-resume.service /usr/etc/systemd/system/
-COPY data/hardware/ath11k-suspend.service /usr/etc/systemd/system/
-
-# Add catppuccin color-sheme
-COPY data/catppuccin/*.colors /usr/share/color-schemes/
-COPY data/catppuccin/*.colorscheme /usr/share/konsole/
-
-# Add sddm customization
-COPY data/sddm/blueish.png /usr/share/sddm/themes/breeze
-COPY data/sddm/theme.conf.user /usr/share/sddm/themes/breeze
-COPY data/sddm/maik.face.icon /usr/share/sddm/faces
-
-# Add nfs mount
-COPY data/nfs/* /usr/etc/systemd/system/
-
-# Customize pipewire
-COPY data/pipewire/* /etc/pipewire/pipewire.conf.d/
+COPY system_files/ /
 
 COPY build.sh /tmp/build.sh
 RUN mkdir -p /var/lib/alternatives && \
