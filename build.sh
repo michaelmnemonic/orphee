@@ -38,7 +38,7 @@ rpm-ostree install pam_mount	\
 rpm-ostree override remove firewall-config
 
 # Remove .desktop file for wine applications
-rm /usr/share/applications/wine-*.desktop
+sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/wine-*.desktop
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
