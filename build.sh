@@ -32,7 +32,8 @@ rpm-ostree install pam_mount	\
 	libreoffice-writer			\
 	libreoffice-impress			\
 	libreoffice-langpack-de		\
-	libreoffice-kf6
+	libreoffice-kf6				\
+	langpacks-de
 
 # Remove unneded applications
 rpm-ostree uninstall			\
