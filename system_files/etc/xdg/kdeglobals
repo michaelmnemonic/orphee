@@ -1,0 +1,7 @@
+[KDE Control Module Restrictions][$i]
+gamecontroller.desktop=false
+kaccounts.desktop=false
+tablet.desktop=false
+virtualkeyboard.desktop=false
+activites.desktop=false
+bolt.desktop=false
