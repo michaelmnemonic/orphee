@@ -35,9 +35,6 @@ rpm-ostree install pam_mount	\
 	libreoffice-kf6			\
 	--uninstall firewall-config
 
-# Enable tpm unlock during boot
-rpm-ostree initramfs --enable --arg=--force-add --arg=tpm2-tss
-
 # Remove .desktop file for wine applications
 rm /usr/share/applications/wine-*.desktop
 
