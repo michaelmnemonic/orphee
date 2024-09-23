@@ -33,7 +33,6 @@ rpm-ostree install				\
 	skanpage					\
 	steam						\
 	syncthing					\
-	tokodon						\
 	wine						\
 	wine-mono
 
