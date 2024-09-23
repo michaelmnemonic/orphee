@@ -35,8 +35,9 @@ rpm-ostree install pam_mount	\
 	libreoffice-kf6
 
 # Remove unneded applications
-rpm-ostree uninstall \
-	dosbox-staging
+rpm-ostree uninstall			\
+	dosbox-staging				\
+	nvtop
 
 # Remove preinstalled applications
 rpm-ostree override remove firewall-config
