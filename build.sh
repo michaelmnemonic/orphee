@@ -24,6 +24,7 @@ rpm-ostree install				\
 	libreoffice-kf6				\
 	libreoffice-langpack-de		\
 	libreoffice-writer			\
+	mangohud					\
 	merkuro						\
 	neochat						\
 	okular						\
