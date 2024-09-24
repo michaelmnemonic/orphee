@@ -1,0 +1,4 @@
+alias whipper="podman run -ti --rm --device=/dev/cdrom \
+    --mount type=bind,source=/usr/etc/whipper.conf,target=/home/worker/.config/whipper/whipper.conf \
+    --mount type=bind,source=${PWD}/output,target=/output \
+    docker.io/whipperteam/whipper"
