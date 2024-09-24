@@ -29,6 +29,7 @@ rpm-ostree install				\
 	neochat						\
 	okular						\
 	pam_mount					\
+	pcsc-cyberjack				\
 	rsms-inter-fonts			\
 	skanpage					\
 	steam						\
