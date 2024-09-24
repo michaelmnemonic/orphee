@@ -18,7 +18,6 @@ rpm-ostree install				\
 	kcalc						\
 	kdepim-addons				\
 	kmail						\
-	kmymoney					\
 	langpacks-de				\
 	libreoffice-calc			\
 	libreoffice-impress			\
