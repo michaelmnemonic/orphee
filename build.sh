@@ -34,19 +34,16 @@ rpm-ostree install				\
 	skanpage					\
 	steam						\
 	syncthing					\
-	wine						\
-	wine-mono
+	wine-core					\
+	wine-mono					\
+	wine-pulseaudio
 
 # Remove unneded applications
 rpm-ostree uninstall			\
-	dosbox-staging				\
 	nvtop
 
 # Remove preinstalled applications
 rpm-ostree override remove firewall-config
-
-# Hide application entries for wine
-sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/wine-*.desktop
 
 # Hide application entries for syncthing
 sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/syncthing-*.desktop
