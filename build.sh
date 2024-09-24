@@ -33,6 +33,7 @@ rpm-ostree install				\
 	skanpage					\
 	steam						\
 	syncthing					\
+	transmission-qt				\
 	wine-core					\
 	wine-mono					\
 	wine-pulseaudio
